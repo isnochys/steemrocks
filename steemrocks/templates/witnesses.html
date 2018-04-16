@@ -28,7 +28,7 @@
   {% for witness in witnesses %}
     <tr>
       <th scope="row">{{ witness.rank }}</th>
-        <td><a href="https://steemit.com/@{{ witness.owner }}">{% if not witness.active %}<del><i style="color:red;">{{ witness.owner }}</i></del>{% else %}<strong>{{ witness.owner }}</strong>{% endif %}</a></td>
+        <td><a href="https://steemit.com/@{{ witness.owner }}">{% if not witness.active %}<del><i style="color:red;">{{ witness.owner }}</i></del>{% else %}<strong>{{ witness.owner }}</strong>{% endif %}</a> <a href="https://v2.steemconnect.com/sign/account-witness-vote?witness={{ witness.owner }}&approve=1">Vote</a></td>
       <td><i>{{ witness.votes_in_mv }}</i> MV</td>
         <td><a href="{{ witness.url }}">link</a></td>
       <td>{{ witness.total_missed }}</td>
